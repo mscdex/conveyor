@@ -1,7 +1,7 @@
 { "name": "conveyor",
   "version": "0.0.0",
   "author": "Brian White <mscdex@mscdex.net>",
-  "description": "Feed multiple streams sequentially into one",
+  "description": "Feed multiple node.js streams sequentially into one stream",
   "main": "./lib/main",
   "scripts": {
     "test": "node test/test.js"

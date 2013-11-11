@@ -2,7 +2,7 @@
 Description
 ===========
 
-Feed multiple streams sequentially into one (Writable or Duplex stream).
+Feed multiple node.js streams sequentially into one (Writable or Duplex) stream.
 
 
 Requirements
