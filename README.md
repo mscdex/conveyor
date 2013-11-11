@@ -129,8 +129,8 @@ API
 
 _Conveyor_ is an _EventEmitter_
 
-Conveyor (special) events
--------------------------
+Conveyor events
+---------------
 
 * **end**() - Emitted after end() is called and all streams have been processed.
 
