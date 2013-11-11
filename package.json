@@ -1,0 +1,13 @@
+{ "name": "conveyor",
+  "version": "0.0.0",
+  "author": "Brian White <mscdex@mscdex.net>",
+  "description": "Feed multiple streams sequentially into one",
+  "main": "./lib/main",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "engines": { "node": ">=0.10.0" },
+  "keywords": [ "streams", "queue", "multiple", "many" ],
+  "licenses": [ { "type": "MIT", "url": "http://github.com/mscdex/conveyor/raw/master/LICENSE" } ],
+  "repository" : { "type": "git", "url": "http://github.com/mscdex/conveyor.git" }
+}
