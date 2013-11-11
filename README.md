@@ -24,7 +24,7 @@ Install
 Examples
 ========
 
-* Pass HTTP requests to an echo stream:
+* Pass HTTP requests to a 'passthrough' stream:
 
 ```javascript
 var TransformStream = require('stream').Transform,
@@ -54,7 +54,6 @@ http.createServer(function(req, res) {
       method: 'POST'
     }, function(res) {
       var b = '';
-      res.setEncoding('utf8');
       res.on('data', function(d) {
         b += d;
       }).on('end', function() {
@@ -77,7 +76,7 @@ http.createServer(function(req, res) {
 // Hello from request #10
 ```
 
-* Pass HTTP requests to an Writable stream:
+* Pass HTTP requests to a Writable stream:
 
 ```javascript
 var WritableStream = require('stream').Writable,
