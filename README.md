@@ -144,8 +144,14 @@ Conveyor methods
 
 * **(constructor)**(< _Writable_ >dest, < _object_ >config) - Creates and returns a new Dicer instance with the following valid `config` settings:
 
-    * **max** - _integer_ - This is the max queue size.
+    * **max** - _integer_ - This is the max queue size (this does not include the stream currently being processed, if applicable). (Default: Infinity)
+
+    * **startPaused** - _boolean_ - Start in a paused state? (Default: false)
 
 * **push**(< _Readable_ >stream[, < _Writable_ >pipeStream][, < _object_ >pipeStreamOpts][, < _function_ >callback]) - _boolean_ - Pushes (appends) `stream` to the queue. If `pipeStream` is set, data (from `dest` passed to the constructor) will be piped to this stream with optional `pipeStreamOpts` pipe settings. `callback` is called once `stream` has ended and `dest` is drained. The return value is false if `stream` could not be enqueued due to the queue being full.
 
 * **unshift**(< _Readable_ >stream[, < _Writable_ >pipeStream][, < _object_ >pipeStreamOpts][, < _function_ >callback]) - _boolean_ - Identical to push() except it unshifts (prepends) `stream` to the queue.
+
+* **pause**() - _(void)_ - Pauses processing of streams in the queue. If a stream is currently being processed, then the next one will not be started until resume() has been explicitly called.
+
+* **resume**() - _(void)_ - Resumes processing of streams in the queue.
