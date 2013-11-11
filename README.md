@@ -4,6 +4,10 @@ Description
 
 Feed multiple node.js streams sequentially into one (Writable or Duplex) stream.
 
+Note: The single Writable/Duplex stream will emit multiple 'finish' events, so if
+you have a listener for that event, you can ignore it until you end the Conveyor
+instance.
+
 
 Requirements
 ============
